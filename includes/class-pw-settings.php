@@ -202,6 +202,8 @@ class PW_Settings {
 					<?php endif; ?>
 				</div>
 			</header>
+			<?php // WordPress moves admin notices to this marker, so they sit below the banner, not inside it. ?>
+			<hr class="wp-header-end">
 
 			<?php settings_errors(); ?>
 
