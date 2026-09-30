@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Professor Web
- * Plugin URI:        https://github.com/afaz2297/professor-web
+ * Plugin URI:        https://github.com/afaz2297/professor-web-wordpress-plugin
  * Update URI:        false
  * Description:       Custom Elementor widgets, site settings and design system for The Jolly Joiner website. Built by Professor Web.
  * Version:           1.0.0
