@@ -24,6 +24,14 @@ class PW_Frontend {
 		add_action( 'wp_footer', array( $this, 'sprite' ), 1 );
 		add_filter( 'body_class', array( $this, 'body_class' ) );
 
+		// Hello's "Skip to content" link points at #content, which Elementor full-width pages don't have.
+		add_filter( 'hello_elementor_skip_link_url', function () {
+			return '#pw-content';
+		} );
+		add_action( 'elementor/theme/after_do_header', function () {
+			echo '<div id="pw-content" tabindex="-1"></div>';
+		} );
+
 		if ( pw_setting( 'local_fonts' ) ) {
 			// Fonts are bundled with the plugin, so Elementor does not need to call Google.
 			add_filter( 'elementor/frontend/print_google_fonts', '__return_false' );
